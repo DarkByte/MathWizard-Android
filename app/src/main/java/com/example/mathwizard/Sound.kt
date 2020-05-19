@@ -1,10 +1,8 @@
 package com.example.mathwizard
 
 import android.content.Context
-import android.media.AudioManager
 import android.media.MediaPlayer
 import android.media.MediaPlayer.OnCompletionListener
-import android.media.MediaPlayer.create
 import androidx.appcompat.app.AppCompatActivity
 
 //var mediaPlayer: MediaPlayer? = null
@@ -39,10 +37,10 @@ class Sound: AppCompatActivity() {
 
         fun finalScore(stars: Int) {
             when (stars) {
-                1 -> playSound("star1_final")
-                2 -> playSound("star2_final")
-                3 -> playSound("star3_final")
-                else -> playSound("star0_final")
+                1 -> playSound("stars1_final")
+                2 -> playSound("stars2_final")
+                3 -> playSound("stars3_final")
+                else -> playSound("stars0_final")
             }
         }
 
