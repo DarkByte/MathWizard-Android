@@ -70,13 +70,13 @@ class TestActivity : AppCompatActivity(), View.OnClickListener {
             starsImage.setImageResource(R.drawable.stars3)
             wizardImage.setImageResource(R.drawable.wizard_eyes_front)
 
-            testQuestion()
+            updateTestQuestion()
         } else {
             showScoreDialog()
         }
     }
 
-    private fun testQuestion() {
+    private fun updateTestQuestion() {
         testQuestion.text = quizManager.questionText()
     }
 

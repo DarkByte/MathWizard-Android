@@ -13,7 +13,7 @@ data class QuizManager(val tables: IntArray, private val operation: String) {
     val answerText = MutableLiveData<String>()
 
     private val maxQuestionTime = 12
-    private val coolDownTime = 2
+    private val coolDownTime = 3
     private val questionSecond = 1000
 
     private lateinit var questionTimer: CountDownTimer
