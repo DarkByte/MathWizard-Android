@@ -12,6 +12,7 @@ data class QuizManager(val tables: IntArray, private val operation: String) {
     val quizScore = MutableLiveData<Int>()
     val answerText = MutableLiveData<String>()
 
+    private val maxStars = 3
     private val maxQuestionTime = 12
     private val coolDownTime = 3
     private val questionSecond = 1000
@@ -21,7 +22,7 @@ data class QuizManager(val tables: IntArray, private val operation: String) {
 
     private var questions = ArrayList<QuestionData>()
     private var questionIndex: Int = -1
-    private var questionsPerTable: Int = 4
+    private var questionsPerTable: Int = 5
     private var needsScoreUpdate: Boolean = true
     private var isInCoolDown: Boolean = false
 
@@ -97,7 +98,7 @@ data class QuizManager(val tables: IntArray, private val operation: String) {
     }
 
     fun starsAchieved(): Int {
-        return score().div(tables.count()).div(15)
+        return score().div(tables.count()).div(maxStars * questionsPerTable)
     }
 
     fun canMoveToNextQuestion(): Boolean {
@@ -115,7 +116,7 @@ data class QuizManager(val tables: IntArray, private val operation: String) {
 
     // UI
     fun starsAt(second: Int): Int {
-        return when ((second - 1).div(3)) {
+        return when ((second - 1).div(maxStars)) {
             3 -> R.drawable.stars3
             2 -> R.drawable.stars2
             1 -> R.drawable.stars1
@@ -135,7 +136,7 @@ data class QuizManager(val tables: IntArray, private val operation: String) {
 
         for (table: Int in tables) {
             itemCount = 0
-            while (itemCount <= questionsPerTable) {
+            while (itemCount <= questionsPerTable - 1) {
                 randomItem = 1 + (abs(ThreadLocalRandom.current().nextInt()).rem(10))
                 when (operation) {
                     "-" -> randomItem += table - 1

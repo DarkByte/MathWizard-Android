@@ -31,5 +31,5 @@ fun Activity.hideKeyboard() {
 }
 
 fun print(text: String) {
-    Log.d("MathWiz: ", text)
+    Log.d("DarkByte: ", text)
 }

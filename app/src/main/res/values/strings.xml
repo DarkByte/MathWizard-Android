@@ -1,30 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Math Wizard</string>
     <string name="hello_splash">Hello there!</string>
 
-    <string name="wizard_book">wizard with book</string>
-    <string name="wizard_splash">wizard splash</string>
-    <string name="val0">0</string>
-    <string name="val1">1</string>
-    <string name="val2">2</string>
-    <string name="val3">3</string>
-    <string name="val4">4</string>
-    <string name="val5">5</string>
-    <string name="val6">6</string>
-    <string name="val7">7</string>
-    <string name="val8">8</string>
-    <string name="val9">9</string>
-    <string name="valBack">-</string>
-    <string name="valExit">exit</string>
-
-    <string name="image"></string>
     <string name="start">Start</string>
     <string name="title_activity_test">TestActivity</string>
-
-    <string name="add">+</string>
-    <string name="sub">-</string>
-    <string name="mul">*</string>
-    <string name="div">/</string>
 
     <string name="exitConfirmation">Are you sure you want to\nexit the quiz?</string>
     <string name="dialogYes">Yes</string>

@@ -5,14 +5,16 @@ import android.media.MediaPlayer
 import android.media.MediaPlayer.OnCompletionListener
 import androidx.appcompat.app.AppCompatActivity
 
-//var mediaPlayer: MediaPlayer? = null
-
-class Sound: AppCompatActivity() {
+class Sound {
     companion object {
         private lateinit var context: Context
 
         fun from(context: Context) {
             this.context = context
+        }
+
+        fun intro() {
+            playSound("intro")
         }
 
         fun tap() {

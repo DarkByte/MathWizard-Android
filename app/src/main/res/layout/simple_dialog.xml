@@ -18,7 +18,6 @@
         android:lineSpacingExtra="6dp"
         android:text=""
         android:textAlignment="center"
-        android:textColor="@color/wizard_yellow"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,7 +25,7 @@
 
     <Button
         android:id="@+id/confirmButton"
-        android:layout_width="100dp"
+        android:layout_width="80dp"
         android:layout_height="60dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
@@ -35,6 +34,7 @@
         android:lineSpacingExtra="36sp"
         android:text="@string/dialogYes"
         android:textColor="@android:color/holo_red_light"
+        style="@style/Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/denyButton"
         app:layout_constraintHorizontal_bias="0.5"
@@ -44,14 +44,15 @@
 
     <Button
         android:id="@+id/denyButton"
-        android:layout_width="200dp"
+        android:layout_width="220dp"
         android:layout_height="60dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/button_keyboard"
         android:lineSpacingExtra="36sp"
         android:text="@string/dialogNo"
-        android:textColor="@color/wizard_yellow"
+        android:textColor="@android:color/holo_green_light"
+        style="@style/Button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/confirmButton"
